@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+ 
+{% block title %}Add New Student Records{% endblock title %}
+ 
+{% block content %}
+<div class="col-md-12">
+         
+    <form method="POST" class="post-form" action="/add">
+            {% csrf_token %}
+        <div class="container">
+    <br>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <h3 style="text-align:center;color: red">Enter Details</h3>
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Student Name:</label>
+        <div class="col-sm-4">
+          {{ form.name }}
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Student Year:</label>
+        <div class="col-sm-4">
+          {{ form.year }}
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Student Course:</label>
+        <div class="col-sm-4">
+          {{ form.course }}
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Student Email:</label>
+        <div class="col-sm-4">
+          {{ form.email }}
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Student Contact:</label>
+        <div class="col-sm-4">
+          {{ form.contact }}
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Date & Time:</label>
+        <div class="col-sm-4">
+          {{ form.date }}
+        </div>
+       </div>
+
+       <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+       </div>
+        </div>
+    </form>
+</div> 
+{% endblock content %} 
